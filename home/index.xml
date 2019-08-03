@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Yash Kant</title>
+    <link>/home/</link>
+    <description>Recent content in Homes on Yash Kant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/home/hero_carousel/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0530</pubDate>
+      
+      <guid>/home/hero_carousel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yash Kant</title>
+      <link>/home/hero/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0530</pubDate>
+      
+      <guid>/home/hero/</guid>
+      <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0530</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>About Bio: I am a final year undergraduate student at Indian Institute of Technology, Roorkee. I&amp;rsquo;m fascinated by AutoML and I am working on Neural Architecture Search these days. I am also starting with Reinforcement Learning which I would like to work on next.
+Background: During my freshman and sophomore years I enjoyed software development (mainly on Android). I have interned at Microsoft, Bangalore with the Azure Team. I have done a few projects in Resource Efficient ML and Adversarial ML.</description>
+    </item>
+    
+  </channel>
+</rss>
