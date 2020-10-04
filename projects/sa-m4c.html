@@ -1,0 +1,439 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
+<script type="text/javascript" src="../data/common/hidebib.js"></script>
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+
+	<title>Spatially Aware Multimodal Transformers for TextVQA</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Spatially Aware Multimodal Transformers for TextVQA." />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script> -->
+
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Spatially Aware Multimodal Transformers for TextVQA</span>
+		<table align=center width=1000px>
+			<table align=center width=700px>
+				<tr>
+					
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="yashkant.github.io/">Yash Kant<sup>1</sup></a></span>
+						</center>
+					</td>
+
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://www.cc.gatech.edu/~dbatra/">Dhruv Batra<sup>1,2</sup></a></span>
+						</center>
+					</td>
+					
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://panderson.me/">Peter Anderson<sup>1,3</sup></a></span>
+						</center>
+					</td>
+					
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://alexander-schwing.de/">Alex Schwing<sup>5</sup></a></span>
+						</center>
+					</td>
+
+
+				</tr>
+
+			</table>
+
+			<table align=center width=450px>
+				<tr>
+					
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://www.cc.gatech.edu/~parikh/">Devi Parikh<sup>1,2</sup></a></span>
+						</center>
+					</td>
+
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://www.cc.gatech.edu/~jlu347/">Jiasen Lu<sup>1,4</sup></a></span>
+						</center>
+					</td>
+
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://dexter1691.github.io/">Harsh Agrawal<sup>1</sup></a></span>
+						</center>
+					</td>
+					
+				</tr>
+			</table>
+
+
+			<table align=center width=800px>
+				<tr>
+					
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><sup>1</sup>Georgia Tech</a></span>
+						</center>
+					</td>
+
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><sup>2</sup>FAIR</a></span>
+						</center>
+					</td>
+
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><sup>3</sup>Google AI</a></span>
+						</center>
+					</td>
+
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><sup>4</sup>Allen AI </a></span>
+						</center>
+					</td>
+
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><sup>5</sup>UIUC</a></span>
+						</center>
+					</td>
+					
+				</tr>
+			</table>
+
+
+
+			<table align=center width=800px style="padding-bottom: 50px">
+
+				<tr>
+            		<td align=center colspan="100%">
+            			<span style="font-size:24px">Published at <a href="https://eccv2020.eu/">ECCV, 2020</a> </span>
+            		</td>
+          		</tr>
+
+				<tr>
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2007.12146'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/yashkant/spat-textvqa'>[Code]</a></span><br>
+						</center>
+					</td>
+
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=rO89lcTvz2U'>[Talk (long)]</a></span><br>
+						</center>
+					</td>
+
+
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=uPZra6HfLd0'>[Talk (short)]</a></span><br>
+						</center>
+					</td>
+
+
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href="../data/sa-m4c/slides.pdf">[Slides]</a></span><br>
+						</center>
+					</td>
+
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:850px" src="../data/sa-m4c/sa-m4c-large.png"/>
+					</center>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="400px">
+  					<center>
+  	                	<span style="font-size:14px"><i>We construct a spatial-graph that encodes different spatial relationships between a pair of visual
+        					entities and use it to guide the self-attention layers present in multi-modal transformer architectures.</i>
+					</span></center>
+  	              </td>
+
+			</tr>
+  		  
+
+
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				     Textual cues are essential for everyday tasks like buying groceries and using public transport. To develop this assistive technology, we study the TextVQA task, i.e., reasoning about text in images to answer a question. Existing approaches are limited in their use of spatial relations and rely on fully-connected transformer-like architectures to implicitly learn the spatial structure of a scene. In contrast, we propose a novel spatially aware self-attention layer such that each visual entity only looks at neighboring entities defined by a spatial graph. Further, each head in our multi-head self-attention layer focuses on a different subset of relations. Our approach has two advantages: (1) each head considers local context instead of dispersing the attention amongst all visual entities; (2) we avoid learning redundant features. We show that our model improves the absolute accuracy of current state-of-the-art methods on TextVQA by 2.2% overall over an improved baseline, and 4.62% on questions that involve spatial reasoning and can be answered correctly using OCR tokens. Similarly on ST-VQA, we improve the absolute accuracy by 4.2%. We further show that spatially aware self-attention improves visual grounding. 
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Method</h1></center>
+		<tr>
+			<td>
+					We extend the vanilla self-attention layer to utilize a graph over the input tokens. Instead of looking at the entire global context, an entity attends to just the neighboring entities as defined by a relationship graph. Moreover, heads consider different types of relations which encodes
+					different context and avoids learning redundant features. We define the heterogeneous graph over tokens from multiple modalities which are connected by different edge types. While our framework is general and easily extensible to other tasks, we present our approach for the TextVQA task.
+			</td>
+		</tr>
+	</table>
+
+	<table align=center>
+		<tr>
+			<td width=260px>
+					<center>
+						<img class="round" style="width:850px" src="../data/sa-m4c/method.png"/>
+					</center>
+			</td>
+		</tr>
+
+		<tr>		
+			<td width="400px">
+  					<center>
+  	                	<span style="font-size:14px">
+  	                		<i>        
+  	                			(a) Spatially aware attention layer uses a spatial graph to guide the attention in each head of the self-attention layer.
+						        (b) The spatial graph is represented as a stack of adjacency matrices.
+						        (c) Each head indexed by $h$ looks at a subset of relationships ${T}^h$ defined by the size of the context ($c=2$ here), e.g. $\texttt{head}_1$  looks at a two types of relation (${T}^1 = \{t_1, t_2\}$).
+							</i>
+					</span>
+				</center>
+			</td>
+		</tr>
+
+	</table>
+
+
+
+	<br>
+	<hr>
+
+	<center><h1>Pre-recorded Talk delivered at ECCV, 2020</h1></center>
+	<p align="center">
+	<iframe width="850" height="412" src="https://www.youtube.com/embed/rO89lcTvz2U?list=PL02J3fILgaphGnFzxqMh1o7ONSi4tmmU0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	</p>
+
+	<hr>
+	<table align=center width=850px>
+		<center><h1>Paper and Bibtex</h1></center>
+
+<tr>
+        <td width="200px" align="left">
+		<a href="https://arxiv.org/abs/2007.12146"><img style="height:200px" src="../data/sa-m4c/paper.png"/></a>
+
+        <center>
+        </td>
+        <td width="50px" align="center">
+        </td>
+        <td width="550px" align="left">
+        <p style="text-align:left;">
+        	<b>
+        		<span style="font-size:20pt">Citation</span>
+        	</b>
+        	<br>
+        	<span style="font-size:6px;">&nbsp;<br></span> 
+        	<span style="font-size:15pt">Kant, Y., Batra, D., Anderson, P., Schwing, A., Parikh, D., Lu, J., & Agrawal, H. 2020. Spatially Aware Multimodal Transformers for TextVQA. In ECCV. </span></p>
+        <span style="font-size:20pt"><a shape="rect" href="javascript:togglebib('assemblies19_bib')" class="togglebib">[Bibtex]</a></span>
+        <div class="paper" id="assemblies19_bib">
+                <pre xml:space="preserve" style="display: block;">@inproceedings{kant2020spatially,
+  title={Spatially Aware Multimodal Transformers for TextVQA},
+  author={Kant, Yash and Batra, Dhruv and Anderson, Peter 
+          and Schwing, Alexander and Parikh, Devi and Lu, Jiasen
+          and Agrawal, Harsh},
+  booktitle={ECCV}
+  year={2020}}
+
+                </pre>
+          </div>
+        </td>
+        </tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					We thank <a href="https://abhishekdas.com/">Abhishek Das</a> and <a href="https://amoudgl.github.io/">Abhinav Moudgil</a> for their feedback. The Georgia Tech effort was supported in part by NSF, AFRL, DARPA, ONR YIPs, ARO PECASE, Amazon. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the U.S. Government, or any sponsor.
+					<br>
+					<br>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+
