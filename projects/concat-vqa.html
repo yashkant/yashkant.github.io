@@ -1,0 +1,367 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
+<script type="text/javascript" src="../data/common/hidebib.js"></script>
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+
+	<title>Contrast and Classify: Alternate Training for Robust VQA</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content=" Contrast and Classify: Alternate Training for Robust VQA ." />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script> -->
+
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px"> Contrast and Classify: Alternate Training for Robust VQA </span>
+		<table align=center width=1000px>
+			<table align=center width=800px>
+				<tr>
+					
+					<td align=center>
+						<center>
+							<span style="font-size:20px"><a href="https://yashkant.github.io/">Yash Kant<sup>1</sup></a></span>
+						</center>
+					</td>
+
+					<td align=center>
+						<center>
+							<span style="font-size:20px"><a href="https://amoudgl.github.io/">Abhinav Moudgil<sup>1</sup></a></span>
+						</center>
+					</td>
+					
+					<td align=center>
+						<center>
+							<span style="font-size:20px"><a href="https://www.cc.gatech.edu/~dbatra/">Dhruv Batra<sup>1,2</sup></a></span>
+						</center>
+					</td>
+					
+					<td align=center>
+						<center>
+							<span style="font-size:20px"><a href="https://www.cc.gatech.edu/~parikh/">Devi Parikh<sup>1,2</sup></a></span>
+						</center>
+					</td>
+
+					<td align=center>
+						<center>
+							<span style="font-size:20px"><a href="https://dexter1691.github.io/">Harsh Agrawal<sup>1</sup></a></span>
+						</center>
+					</td>
+
+
+				</tr>
+
+			</table>
+
+			<table align=center width=800px>
+				<tr>
+					
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><sup>1</sup>Georgia Tech</a></span>
+						</center>
+					</td>
+
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><sup>2</sup>Facebook AI Research</a></span>
+						</center>
+					</td>
+
+				</tr>
+			</table>
+
+
+
+			<table align=center width=500px style="padding-bottom: 50px">
+
+				<tr>
+            		<td align=center colspan="100%">
+            			<span style="font-size:24px">Preprint, Under Review</a> </span>
+            		</td>
+          		</tr>
+
+				<tr>
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2007.12146'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/yashkant/concat-vqa'>[Code]</a></span><br>
+						</center>
+					</td>
+
+<!--					<td align=center width=20px>-->
+<!--						<center>-->
+<!--							<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=rO89lcTvz2U'>[Talk (long)]</a></span><br>-->
+<!--						</center>-->
+<!--					</td>-->
+
+
+<!--					<td align=center width=20px>-->
+<!--						<center>-->
+<!--							<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=uPZra6HfLd0'>[Talk (short)]</a></span><br>-->
+<!--						</center>-->
+<!--					</td>-->
+
+
+					<td align=center width=20px>
+						<center>
+							<span style="font-size:24px"><a href="../data/concat-vqa/slides.pdf">[Slides]</a></span><br>
+						</center>
+					</td>
+
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:850px" src="../data/concat-vqa/concat-vqa-large.png"/>
+					</center>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="400px">
+  					<center>
+  	                	<span style="font-size:14px"><i>
+							<b>Overview of ConCAT.</b>
+							(a) We augment the VQA dataset by paraphrasing every question via back-translation.
+							(b) We carefully curate a contrastive batch by sampling different types of positives and negatives to learn joint V+L representations by
+							minimizing scaled supervised contrastive loss. (c) Cross Entropy iteration.</i>
+					</span></center>
+  	              </td>
+
+			</tr>
+
+
+
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				Recent Visual Question Answering (VQA) models have shown impressive performance on the VQA benchmark but are sensitive to small linguistic variations in input questions.
+				Existing approaches address this by augmenting the dataset with question paraphrases from visual question generation models or adversarial perturbations.
+				These approaches use the combined data to learn an answer classifier by minimizing the standard cross-entropy loss. To more effectively leverage the augmented data,
+				we build on the recent success in contrastive learning. We propose a novel training paradigm (ConCAT) that alternately optimizes cross-entropy and contrastive losses.
+				The contrastive loss encourages representations to be robust to linguistic variations in questions while the cross-entropy loss preserves the discriminative power of the
+				representations for answer classification. We find that alternately optimizing both losses is key to effective training. VQA models trained with ConCAT achieve higher
+				consensus scores on the VQA-Rephrasings dataset  as well as higher VQA accuracy on the VQA 2.0 dataset
+				compared to existing approaches across a variety of data augmentation strategies.
+			</td>
+		</tr>
+	</table>
+
+<!--	<br>-->
+<!--	<hr>-->
+
+<!--	<center><h1>Pre-recorded Talk delivered at ECCV, 2020</h1></center>-->
+<!--	<p align="center">-->
+<!--	<iframe width="850" height="412" src="https://www.youtube.com/embed/rO89lcTvz2U?list=PL02J3fILgaphGnFzxqMh1o7ONSi4tmmU0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--	</p>-->
+
+	<br>
+	<hr>
+	<table align=center width=850px>
+		<center><h1>Paper and Bibtex</h1></center>
+
+	<tr>
+        <td width="200px" align="left">
+		<a href="https://arxiv.org/abs/2007.12146"><img style="height:200px" src="../data/concat-vqa/paper.png"/></a>
+
+        <center>
+        </td>
+        <td width="50px" align="center">
+        </td>
+        <td width="550px" align="left">
+        <p style="text-align:left;">
+        	<b>
+        		<span style="font-size:20pt">Citation</span>
+        	</b>
+        	<br>
+        	<span style="font-size:6px;">&nbsp;<br></span> 
+        	<span style="font-size:15pt"> ##TODO##.  Contrast and Classify: Alternate Training for Robust VQA . Arxiv. </span></p>
+        <span style="font-size:20pt"><a shape="rect" href="javascript:togglebib('assemblies19_bib')" class="togglebib">[Bibtex]</a></span>
+        <div class="paper" id="assemblies19_bib">
+                <pre xml:space="preserve" style="display: block;">@inproceedings{kant2020spatially,
+  title={ Contrast and Classify: Alternate Training for Robust VQA },
+  author={Kant, Yash and Batra, Dhruv and Anderson, Peter 
+          and Schwing, Alexander and Parikh, Devi and Lu, Jiasen
+          and Agrawal, Harsh},
+  booktitle={ECCV}
+  year={2020}}
+
+                </pre>
+          </div>
+        </td>
+        </tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					We thank <a href="https://abhishekdas.com/">Abhishek Das</a>, <a href="https://prithv1.xyz/">Prithvijit Chattopadhyay</a> and <a href="https://arjunmajum.github.io/">Arjun Majumdar</a> for their feedback. The Georgia Tech effort was supported in part by NSF, AFRL, DARPA, ONR YIPs, ARO PECASE, Amazon. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the U.S. Government, or any sponsor.
+					<br>
+					<br>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+
