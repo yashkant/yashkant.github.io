@@ -48,26 +48,11 @@
               <a href="data/yashkant.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="data/yashkant.jpg" class="hoverZoomLink"></a>
             </td>
           </tr>
-        </tbody></table>
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Projects </heading>
-<!--              <p>My recent projects were</p>-->
-              <p class="content">
-              <ul>
-              <li><b><i>Adding Complement Objective Training to Pythia:</i></b> I experimented with adding Complement Objective Training in FAIR's vision and language framework <a href="https://github.com/facebookresearch/pythia/">Pythia</a> and also wrote a report on my findings <a href="https://drive.google.com/file/d/16NtLvZvBPq1cRVeCSq7sXXg0C8NkSi4l/view">here</a>, the code is <a href="https://github.com/facebookresearch/pythia/pull/32">here</a>. </li>
-              <li><b><i>ICLR Reproducibility Challenge:</i></b> We reproduced <a href="https://arxiv.org/abs/1806.06763">Closing the Generalization Gap of Adaptive Gradient Methods in Training Deep Neural Networks </a> and here's the <a href="https://github.com/yashkant/Padam-Tensorflow">code.</a></li>
-              <li><b><i>Visual Chatbot Version 2.0 (<a href="https://github.com/Cloud-CV/visual-chatbot/pull/18">here</a>):</i></b> I shifted the old Lua-Torch codebase to PyTorch, added better captioning and trained the VisDial model on BUTD features.</li>
-              <li><b><i>Quantized Neural Architecture Search (unreleased):</i></b>  I quantized the search space of Neural Architecture Search algorithms [<a href="https://arxiv.org/abs/1802.03268">ENAS</a> and <a href="https://arxiv.org/abs/1712.00559">PNAS</a>] to search for resource-efficient models.</li>
-              </ul>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
+        </tbody>
+      </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
+          <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research
               </heading>
@@ -77,8 +62,52 @@
         </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
           <tbody>
+          <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id="lh_image" style="opacity: 0;"><video muted="" autoplay="" loop="" width="100%" height="100%">
+                <source src="data/concat-vqa/teaser.gif" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src="data/concat-vqa/teaser.gif" width="180">
+              </div>
+              <script type="text/javascript">
+                function lighthouse_start() {
+                  document.getElementById('lh_image').style.opacity = "1";
+                }
+
+                function lighthouse_stop() {
+                  document.getElementById('lh_image').style.opacity = "0";
+                }
+                lighthouse_stop()
+              </script>
+            </td>
+
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <a href="https://yashkant.github.io/projects/concat-vqa.html">
+                <papertitle>Contrast and Classify: Alternate Training for Robust VQA</papertitle>
+              </a>
+              <br>
+              <strong>Yash Kant</strong>,
+              <a href="https://amoudgl.github.io/">Abhinav Moudgil</a>,
+              <a href="https://www.cc.gatech.edu/~dbatra/">Dhruv Batra</a>,
+              <a href="https://www.cc.gatech.edu/~parikh/">Devi Parikh</a>,
+              <a href="https://dexter1691.github.io/">Harsh Agrawal</a>
+              <br>
+              <em>Preprint, Under Review</em>
+              <br>
+              <a href="https://arxiv.org/abs/2010.06087">arXiv</a> /
+              <a href="https://yashkant.github.io/projects/concat-vqa.html">project page</a> /
+              <a href="https://github.com/yashkant/concat-vqa">code</a> /
+              <a href="https://yashkant.github.io/data/concat-vqa/slides.pdf">slides</a>
+              <br>
+              <p></p>
+              <p>We propose a novel training paradigm (ConCAT) that alternately optimizes cross-entropy and contrastive losses. The contrastive loss encourages representations to be robust to linguistic variations in questions while the cross-entropy loss preserves the discriminative power of the representations for answer classification.</p>
+            </td>
+          </tr>
+
+
           <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -101,7 +130,7 @@
             </td>
 
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2007.12146">
+              <a href="https://yashkant.github.io/projects/sam-textvqa.html">
                 <papertitle>Spatially Aware MultiModal Transformers for TextVQA</papertitle>
               </a>
               <br>
@@ -117,10 +146,34 @@
               <br>
               <a href="https://arxiv.org/abs/2007.12146">arXiv</a> /
               <a href="https://yashkant.github.io/projects/sam-textvqa.html">project page</a> /
-              <a href="https://github.com/yashkant/sam-textvqa">code</a>
+              <a href="https://github.com/yashkant/sam-textvqa">code</a> /
+              <a href="https://www.youtube.com/watch?v=uPZra6HfLd0">short talk</a> /
+              <a href="https://www.youtube.com/watch?v=rO89lcTvz2U">long talk</a> /
+              <a href="https://yashkant.github.io/data/sam-textvqa/slides.pdf">slides</a>
               <br>
               <p></p>
               <p>We propose a novel spatially aware self-attention layer such that each visual entity only looks at neighboring entities defined by a spatial graph and use it to solve TextVQA.</p>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+
+
+
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Projects </heading>
+<!--              <p>My recent projects were</p>-->
+              <p class="content">
+              <ul>
+              <li><b><i>Adding Complement Objective Training to Pythia:</i></b> I experimented with adding Complement Objective Training in FAIR's vision and language framework <a href="https://github.com/facebookresearch/pythia/">Pythia</a> and also wrote a report on my findings <a href="https://drive.google.com/file/d/16NtLvZvBPq1cRVeCSq7sXXg0C8NkSi4l/view">here</a>, the code is <a href="https://github.com/facebookresearch/pythia/pull/32">here</a>. </li>
+              <li><b><i>ICLR Reproducibility Challenge:</i></b> We reproduced <a href="https://arxiv.org/abs/1806.06763">Closing the Generalization Gap of Adaptive Gradient Methods in Training Deep Neural Networks </a> and here's the <a href="https://github.com/yashkant/Padam-Tensorflow">code.</a></li>
+              <li><b><i>Visual Chatbot Version 2.0 (<a href="https://github.com/Cloud-CV/visual-chatbot/pull/18">here</a>):</i></b> I shifted the old Lua-Torch codebase to PyTorch, added better captioning and trained the VisDial model on BUTD features.</li>
+              <li><b><i>Quantized Neural Architecture Search (unreleased):</i></b>  I quantized the search space of Neural Architecture Search algorithms [<a href="https://arxiv.org/abs/1802.03268">ENAS</a> and <a href="https://arxiv.org/abs/1712.00559">PNAS</a>] to search for resource-efficient models.</li>
+              </ul>
+              </p>
             </td>
           </tr>
         </tbody></table>
