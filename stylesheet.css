@@ -129,3 +129,9 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/*Prevents image from running out of div containers*/
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
